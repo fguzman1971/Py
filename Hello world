@@ -1,1 +1,15 @@
-print("Hello, World!")
+name: Hello World Workflow
+
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run a one-line script
+      run: echo "Hello, World!"
+
